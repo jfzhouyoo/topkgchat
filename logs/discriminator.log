@@ -1,0 +1,107 @@
+nohup: 忽略输入
+Global seed set to 20
+Some weights of the model checkpoint at cache/bert were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.bias', 'cls.seq_relationship.weight', 'cls.predictions.decoder.weight', 'cls.predictions.transform.dense.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at cache/bert and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+cache/uttr_embed.pkl exist
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name     | Type                          | Params
+-----------------------------------------------------------
+0 | model    | BertForSequenceClassification | 109 M 
+1 | metrics  | MetricCollection              | 0     
+2 | sent_enc | BertModel                     | 22.7 M
+-----------------------------------------------------------
+132 M     Trainable params
+0         Non-trainable params
+132 M     Total params
+528.788   Total estimated model params size (MB)
+Sanity Checking: 0it [00:00, ?it/s]Sanity Checking DataLoader 0:   0%|          | 0/2 [00:00<?, ?it/s]Sanity Checking DataLoader 0: 100%|██████████| 2/2 [00:01<00:00,  1.28it/s]metrics {'Accuracy': tensor(0.5000, device='cuda:0'), 'ConfusionMatrix': tensor([[128,   0],
+        [128,   0]], device='cuda:0'), 'Precision': tensor(0., device='cuda:0'), 'Recall': tensor(0., device='cuda:0')}
+                                                                           Training: 0it [00:00, ?it/s]Epoch 0:   0%|          | 0/198 [00:00<?, ?it/s]Epoch 0:  51%|█████     | 100/198 [01:29<01:27,  1.12it/s]Epoch 0:  51%|█████     | 100/198 [01:29<01:27,  1.12it/s, loss=0.65, v_num=14]Epoch 0:  85%|████████▍ | 168/198 [02:29<00:26,  1.12it/s, loss=0.65, v_num=14]Epoch 0:  85%|████████▍ | 168/198 [02:29<00:26,  1.12it/s, loss=0.619, v_num=14]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/30 [00:00<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 30/30 [00:07<00:00,  4.01it/s][AEpoch 0: 100%|██████████| 198/198 [02:36<00:00,  1.26it/s, loss=0.619, v_num=14]metrics {'Accuracy': tensor(0.6759, device='cuda:0'), 'ConfusionMatrix': tensor([[1109,  770],
+        [ 448, 1431]], device='cuda:0'), 'Precision': tensor(0.6502, device='cuda:0'), 'Recall': tensor(0.7616, device='cuda:0')}
+Epoch 0: 100%|██████████| 198/198 [02:36<00:00,  1.26it/s, loss=0.619, v_num=14]
+                                                                        [AEpoch 0: 100%|██████████| 198/198 [02:36<00:00,  1.26it/s, loss=0.619, v_num=14]Epoch 0, global step 168: 'val_loss' reached 0.59559 (best 0.59559), saving model to 'logs_discri/version_14/checkpoints/best.ckpt' as top 1
+Epoch 1: 100%|██████████| 198/198 [02:39<00:00,  1.24it/s, loss=0.619, v_num=14]Epoch 1:  51%|█████     | 100/198 [04:10<04:05,  2.50s/it, loss=0.619, v_num=14]Epoch 1:  51%|█████     | 100/198 [04:10<04:05,  2.50s/it, loss=0.597, v_num=14]Epoch 1:  85%|████████▍ | 168/198 [05:10<00:55,  1.85s/it, loss=0.597, v_num=14]Epoch 1:  85%|████████▍ | 168/198 [05:10<00:55,  1.85s/it, loss=0.569, v_num=14]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/30 [00:00<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 30/30 [00:07<00:00,  4.04it/s][AEpoch 1: 100%|██████████| 198/198 [05:17<00:00,  1.61s/it, loss=0.569, v_num=14]metrics {'Accuracy': tensor(0.7193, device='cuda:0'), 'ConfusionMatrix': tensor([[1512,  367],
+        [ 688, 1191]], device='cuda:0'), 'Precision': tensor(0.7644, device='cuda:0'), 'Recall': tensor(0.6338, device='cuda:0')}
+Epoch 1: 100%|██████████| 198/198 [05:17<00:00,  1.61s/it, loss=0.569, v_num=14]
+                                                                        [AEpoch 1: 100%|██████████| 198/198 [05:17<00:00,  1.61s/it, loss=0.569, v_num=14]Epoch 1, global step 336: 'val_loss' reached 0.58041 (best 0.58041), saving model to 'logs_discri/version_14/checkpoints/best.ckpt' as top 1
+Epoch 2: 100%|██████████| 198/198 [05:23<00:00,  1.63s/it, loss=0.569, v_num=14]Epoch 2:  51%|█████     | 100/198 [06:53<06:44,  4.13s/it, loss=0.569, v_num=14]Epoch 2:  51%|█████     | 100/198 [06:53<06:44,  4.13s/it, loss=0.544, v_num=14]Epoch 2:  85%|████████▍ | 168/198 [07:52<01:24,  2.81s/it, loss=0.544, v_num=14]Epoch 2:  85%|████████▍ | 168/198 [07:52<01:24,  2.81s/it, loss=0.537, v_num=14]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/30 [00:01<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 30/30 [00:07<00:00,  4.00it/s][AEpoch 2: 100%|██████████| 198/198 [08:00<00:00,  2.43s/it, loss=0.537, v_num=14]metrics {'Accuracy': tensor(0.7374, device='cuda:0'), 'ConfusionMatrix': tensor([[1494,  385],
+        [ 602, 1277]], device='cuda:0'), 'Precision': tensor(0.7684, device='cuda:0'), 'Recall': tensor(0.6796, device='cuda:0')}
+Epoch 2: 100%|██████████| 198/198 [08:00<00:00,  2.43s/it, loss=0.537, v_num=14]
+                                                                        [AEpoch 2: 100%|██████████| 198/198 [08:00<00:00,  2.43s/it, loss=0.537, v_num=14]Epoch 2, global step 504: 'val_loss' reached 0.52358 (best 0.52358), saving model to 'logs_discri/version_14/checkpoints/best.ckpt' as top 1
+Epoch 3: 100%|██████████| 198/198 [08:05<00:00,  2.45s/it, loss=0.537, v_num=14]Epoch 3:  51%|█████     | 100/198 [09:34<09:23,  5.75s/it, loss=0.537, v_num=14]Epoch 3:  51%|█████     | 100/198 [09:34<09:23,  5.75s/it, loss=0.504, v_num=14]Epoch 3:  85%|████████▍ | 168/198 [10:34<01:53,  3.78s/it, loss=0.504, v_num=14]Epoch 3:  85%|████████▍ | 168/198 [10:34<01:53,  3.78s/it, loss=0.503, v_num=14]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/30 [00:00<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 30/30 [00:07<00:00,  4.03it/s][AEpoch 3: 100%|██████████| 198/198 [10:42<00:00,  3.24s/it, loss=0.503, v_num=14]metrics {'Accuracy': tensor(0.7536, device='cuda:0'), 'ConfusionMatrix': tensor([[1399,  480],
+        [ 446, 1433]], device='cuda:0'), 'Precision': tensor(0.7491, device='cuda:0'), 'Recall': tensor(0.7626, device='cuda:0')}
+Epoch 3: 100%|██████████| 198/198 [10:42<00:00,  3.24s/it, loss=0.503, v_num=14]
+                                                                        [AEpoch 3: 100%|██████████| 198/198 [10:42<00:00,  3.24s/it, loss=0.503, v_num=14]Epoch 3, global step 672: 'val_loss' reached 0.50786 (best 0.50786), saving model to 'logs_discri/version_14/checkpoints/best.ckpt' as top 1
+Epoch 4: 100%|██████████| 198/198 [10:47<00:00,  3.27s/it, loss=0.503, v_num=14]Epoch 4:  51%|█████     | 100/198 [12:16<12:02,  7.37s/it, loss=0.503, v_num=14]Epoch 4:  51%|█████     | 100/198 [12:16<12:02,  7.37s/it, loss=0.489, v_num=14]Epoch 4:  85%|████████▍ | 168/198 [13:16<02:22,  4.74s/it, loss=0.489, v_num=14]Epoch 4:  85%|████████▍ | 168/198 [13:16<02:22,  4.74s/it, loss=0.477, v_num=14]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/30 [00:00<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 30/30 [00:07<00:00,  4.01it/s][AEpoch 4: 100%|██████████| 198/198 [13:24<00:00,  4.06s/it, loss=0.477, v_num=14]metrics {'Accuracy': tensor(0.7621, device='cuda:0'), 'ConfusionMatrix': tensor([[1435,  444],
+        [ 450, 1429]], device='cuda:0'), 'Precision': tensor(0.7629, device='cuda:0'), 'Recall': tensor(0.7605, device='cuda:0')}
+Epoch 4: 100%|██████████| 198/198 [13:24<00:00,  4.06s/it, loss=0.477, v_num=14]
+                                                                        [AEpoch 4: 100%|██████████| 198/198 [13:24<00:00,  4.06s/it, loss=0.477, v_num=14]Epoch 4, global step 840: 'val_loss' reached 0.48574 (best 0.48574), saving model to 'logs_discri/version_14/checkpoints/best.ckpt' as top 1
+Epoch 5: 100%|██████████| 198/198 [13:29<00:00,  4.09s/it, loss=0.477, v_num=14]Epoch 5:  51%|█████     | 100/198 [14:59<14:41,  9.00s/it, loss=0.477, v_num=14]Epoch 5:  51%|█████     | 100/198 [14:59<14:41,  9.00s/it, loss=0.468, v_num=14]Epoch 5:  85%|████████▍ | 168/198 [15:59<02:51,  5.71s/it, loss=0.468, v_num=14]Epoch 5:  85%|████████▍ | 168/198 [15:59<02:51,  5.71s/it, loss=0.458, v_num=14]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/30 [00:01<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 30/30 [00:07<00:00,  3.92it/s][AEpoch 5: 100%|██████████| 198/198 [16:07<00:00,  4.89s/it, loss=0.458, v_num=14]metrics {'Accuracy': tensor(0.7738, device='cuda:0'), 'ConfusionMatrix': tensor([[1495,  384],
+        [ 466, 1413]], device='cuda:0'), 'Precision': tensor(0.7863, device='cuda:0'), 'Recall': tensor(0.7520, device='cuda:0')}
+Epoch 5: 100%|██████████| 198/198 [16:07<00:00,  4.89s/it, loss=0.458, v_num=14]
+                                                                        [AEpoch 5: 100%|██████████| 198/198 [16:07<00:00,  4.89s/it, loss=0.458, v_num=14]Epoch 5, global step 1008: 'val_loss' reached 0.47290 (best 0.47290), saving model to 'logs_discri/version_14/checkpoints/best.ckpt' as top 1
+Epoch 6: 100%|██████████| 198/198 [16:12<00:00,  4.91s/it, loss=0.458, v_num=14]Epoch 6:  51%|█████     | 100/198 [17:41<17:20, 10.62s/it, loss=0.458, v_num=14]Epoch 6:  51%|█████     | 100/198 [17:41<17:20, 10.62s/it, loss=0.439, v_num=14]Epoch 6:  85%|████████▍ | 168/198 [18:42<03:20,  6.68s/it, loss=0.439, v_num=14]Epoch 6:  85%|████████▍ | 168/198 [18:42<03:20,  6.68s/it, loss=0.42, v_num=14] 
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/30 [00:01<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 30/30 [00:07<00:00,  3.91it/s][AEpoch 6: 100%|██████████| 198/198 [18:49<00:00,  5.71s/it, loss=0.42, v_num=14]metrics {'Accuracy': tensor(0.7970, device='cuda:0'), 'ConfusionMatrix': tensor([[1481,  398],
+        [ 365, 1514]], device='cuda:0'), 'Precision': tensor(0.7918, device='cuda:0'), 'Recall': tensor(0.8057, device='cuda:0')}
+Epoch 6: 100%|██████████| 198/198 [18:49<00:00,  5.71s/it, loss=0.42, v_num=14]
+                                                                        [AEpoch 6: 100%|██████████| 198/198 [18:49<00:00,  5.71s/it, loss=0.42, v_num=14]Epoch 6, global step 1176: 'val_loss' reached 0.43681 (best 0.43681), saving model to 'logs_discri/version_14/checkpoints/best.ckpt' as top 1
+Epoch 7: 100%|██████████| 198/198 [18:55<00:00,  5.74s/it, loss=0.42, v_num=14]Epoch 7:  51%|█████     | 100/198 [20:26<20:02, 12.27s/it, loss=0.42, v_num=14]Epoch 7:  51%|█████     | 100/198 [20:26<20:02, 12.27s/it, loss=0.401, v_num=14]Epoch 7:  85%|████████▍ | 168/198 [21:27<03:49,  7.66s/it, loss=0.401, v_num=14]Epoch 7:  85%|████████▍ | 168/198 [21:27<03:49,  7.66s/it, loss=0.421, v_num=14]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/30 [00:00<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 30/30 [00:07<00:00,  4.05it/s][AEpoch 7: 100%|██████████| 198/198 [21:34<00:00,  6.54s/it, loss=0.421, v_num=14]metrics {'Accuracy': tensor(0.8057, device='cuda:0'), 'ConfusionMatrix': tensor([[1622,  257],
+        [ 473, 1406]], device='cuda:0'), 'Precision': tensor(0.8455, device='cuda:0'), 'Recall': tensor(0.7483, device='cuda:0')}
+Epoch 7: 100%|██████████| 198/198 [21:34<00:00,  6.54s/it, loss=0.421, v_num=14]
+                                                                        [AEpoch 7: 100%|██████████| 198/198 [21:34<00:00,  6.54s/it, loss=0.421, v_num=14]Epoch 7, global step 1344: 'val_loss' reached 0.43327 (best 0.43327), saving model to 'logs_discri/version_14/checkpoints/best.ckpt' as top 1
+Epoch 8: 100%|██████████| 198/198 [21:40<00:00,  6.57s/it, loss=0.421, v_num=14]Epoch 8:  51%|█████     | 100/198 [23:11<22:43, 13.91s/it, loss=0.421, v_num=14]Epoch 8:  51%|█████     | 100/198 [23:11<22:43, 13.91s/it, loss=0.4, v_num=14]  Epoch 8:  85%|████████▍ | 168/198 [24:10<04:19,  8.64s/it, loss=0.4, v_num=14]Epoch 8:  85%|████████▍ | 168/198 [24:10<04:19,  8.64s/it, loss=0.4, v_num=14]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/30 [00:00<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 30/30 [00:07<00:00,  4.03it/s][AEpoch 8: 100%|██████████| 198/198 [24:18<00:00,  7.37s/it, loss=0.4, v_num=14]metrics {'Accuracy': tensor(0.8281, device='cuda:0'), 'ConfusionMatrix': tensor([[1564,  315],
+        [ 331, 1548]], device='cuda:0'), 'Precision': tensor(0.8309, device='cuda:0'), 'Recall': tensor(0.8238, device='cuda:0')}
+Epoch 8: 100%|██████████| 198/198 [24:18<00:00,  7.37s/it, loss=0.4, v_num=14]
+                                                                        [AEpoch 8: 100%|██████████| 198/198 [24:18<00:00,  7.37s/it, loss=0.4, v_num=14]Epoch 8, global step 1512: 'val_loss' reached 0.40155 (best 0.40155), saving model to 'logs_discri/version_14/checkpoints/best.ckpt' as top 1
+Epoch 9: 100%|██████████| 198/198 [24:24<00:00,  7.39s/it, loss=0.4, v_num=14]Epoch 9:  51%|█████     | 100/198 [25:53<25:22, 15.54s/it, loss=0.4, v_num=14]Epoch 9:  51%|█████     | 100/198 [25:53<25:22, 15.54s/it, loss=0.381, v_num=14]Epoch 9:  85%|████████▍ | 168/198 [26:53<04:48,  9.60s/it, loss=0.381, v_num=14]Epoch 9:  85%|████████▍ | 168/198 [26:53<04:48,  9.60s/it, loss=0.356, v_num=14]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/30 [00:00<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 30/30 [00:07<00:00,  3.99it/s][AEpoch 9: 100%|██████████| 198/198 [27:00<00:00,  8.19s/it, loss=0.356, v_num=14]metrics {'Accuracy': tensor(0.8228, device='cuda:0'), 'ConfusionMatrix': tensor([[1618,  261],
+        [ 405, 1474]], device='cuda:0'), 'Precision': tensor(0.8496, device='cuda:0'), 'Recall': tensor(0.7845, device='cuda:0')}
+Epoch 9: 100%|██████████| 198/198 [27:00<00:00,  8.19s/it, loss=0.356, v_num=14]
+                                                                        [AEpoch 9: 100%|██████████| 198/198 [27:00<00:00,  8.19s/it, loss=0.356, v_num=14]Epoch 9, global step 1680: 'val_loss' reached 0.39787 (best 0.39787), saving model to 'logs_discri/version_14/checkpoints/best.ckpt' as top 1
+Epoch 9: 100%|██████████| 198/198 [27:06<00:00,  8.21s/it, loss=0.356, v_num=14]
+cache/uttr_embed.pkl exist
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Testing: 0it [00:00, ?it/s]Testing DataLoader 0:   0%|          | 0/12 [00:01<?, ?it/s]Testing DataLoader 0: 100%|██████████| 12/12 [00:03<00:00,  3.20it/s]testing metrics {'Accuracy': tensor(0.7270, device='cuda:0'), 'ConfusionMatrix': tensor([[645, 106],
+        [304, 447]], device='cuda:0'), 'Precision': tensor(0.8083, device='cuda:0'), 'Recall': tensor(0.5952, device='cuda:0')}
+Testing DataLoader 0: 100%|██████████| 12/12 [00:03<00:00,  3.19it/s]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│            acc            │    0.7270306348800659     │
+└───────────────────────────┴───────────────────────────┘

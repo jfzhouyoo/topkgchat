@@ -1,0 +1,310 @@
+nohup: 忽略输入
+Global seed set to 100
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+train_len: 2034, valid_len: 1152
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+
+  | Name           | Type             | Params
+----------------------------------------------------
+0 | node2embedding | Embedding        | 14.9 M
+1 | gcn_enc        | GCN_Net          | 308 K 
+2 | context_enc    | GRU              | 857 K 
+3 | fc             | Sequential       | 635 K 
+4 | common_metric  | MetricCollection | 0     
+5 | pr_positive    | MetricCollection | 0     
+6 | pr_negative    | MetricCollection | 0     
+----------------------------------------------------
+16.7 M    Trainable params
+0         Non-trainable params
+16.7 M    Total params
+66.911    Total estimated model params size (MB)
+Sanity Checking: 0it [00:00, ?it/s]Sanity Checking DataLoader 0:   0%|          | 0/2 [00:03<?, ?it/s]Sanity Checking DataLoader 0: 100%|██████████| 2/2 [00:03<00:00,  2.00s/it]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.0059, device='cuda:0'), 'ConfusionMatrix': tensor([[    0, 83603],
+        [    0,   496]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0.0059, device='cuda:0'), 'Recall': tensor(1., device='cuda:0'), 'F1Score': tensor(0.0117, device='cuda:0')}
+pr_negative  {'Precision': tensor(0., device='cuda:0'), 'Recall': tensor(0., device='cuda:0'), 'F1Score': tensor(0., device='cuda:0')}
+val_loss 45.1763 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+                                                                           Training: 0it [00:00, ?it/s]Epoch 0:   0%|          | 0/50 [00:00<?, ?it/s]Epoch 0:  50%|█████     | 25/50 [00:13<00:13,  1.86it/s]Epoch 0:  50%|█████     | 25/50 [00:13<00:13,  1.85it/s, loss=30.3, v_num=0]Epoch 0:  64%|██████▍   | 32/50 [00:15<00:08,  2.00it/s, loss=30.3, v_num=0]Epoch 0:  64%|██████▍   | 32/50 [00:16<00:09,  2.00it/s, loss=20.7, v_num=0]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/18 [00:03<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 18/18 [00:07<00:00,  2.29it/s][AEpoch 0: 100%|██████████| 50/50 [00:24<00:00,  2.08it/s, loss=20.7, v_num=0]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.9941, device='cuda:0'), 'ConfusionMatrix': tensor([[802746,      0],
+        [  4796,      0]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0., device='cuda:0'), 'Recall': tensor(0., device='cuda:0'), 'F1Score': tensor(0., device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9941, device='cuda:0'), 'Recall': tensor(1., device='cuda:0'), 'F1Score': tensor(0.9970, device='cuda:0')}
+val_loss 6.5666 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Epoch 0: 100%|██████████| 50/50 [00:24<00:00,  2.08it/s, loss=20.7, v_num=0]
+                                                                        [AEpoch 0: 100%|██████████| 50/50 [00:24<00:00,  2.08it/s, loss=20.7, v_num=0]Epoch 0, global step 32: 'val_loss' reached 6.56663 (best 6.56663), saving model to 'logs_otters/version_0/checkpoints/best.ckpt' as top 1
+Epoch 1: 100%|██████████| 50/50 [00:24<00:00,  2.04it/s, loss=20.7, v_num=0]Epoch 1:  50%|█████     | 25/50 [00:38<00:38,  1.54s/it, loss=20.7, v_num=0]Epoch 1:  50%|█████     | 25/50 [00:38<00:38,  1.54s/it, loss=3.07, v_num=0]Epoch 1:  64%|██████▍   | 32/50 [00:41<00:23,  1.29s/it, loss=3.07, v_num=0]Epoch 1:  64%|██████▍   | 32/50 [00:41<00:23,  1.29s/it, loss=2.8, v_num=0] 
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/18 [00:03<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 18/18 [00:07<00:00,  2.37it/s][AEpoch 1: 100%|██████████| 50/50 [00:49<00:00,  1.02it/s, loss=2.8, v_num=0]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.9941, device='cuda:0'), 'ConfusionMatrix': tensor([[802746,      0],
+        [  4796,      0]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0., device='cuda:0'), 'Recall': tensor(0., device='cuda:0'), 'F1Score': tensor(0., device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9941, device='cuda:0'), 'Recall': tensor(1., device='cuda:0'), 'F1Score': tensor(0.9970, device='cuda:0')}
+val_loss 2.4535 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Epoch 1: 100%|██████████| 50/50 [00:49<00:00,  1.02it/s, loss=2.8, v_num=0]
+                                                                        [AEpoch 1: 100%|██████████| 50/50 [00:49<00:00,  1.02it/s, loss=2.8, v_num=0]Epoch 1, global step 64: 'val_loss' reached 2.45347 (best 2.45347), saving model to 'logs_otters/version_0/checkpoints/best.ckpt' as top 1
+Epoch 2: 100%|██████████| 50/50 [00:49<00:00,  1.00it/s, loss=2.8, v_num=0]Epoch 2:  50%|█████     | 25/50 [01:09<01:09,  2.78s/it, loss=2.8, v_num=0]Epoch 2:  50%|█████     | 25/50 [01:09<01:09,  2.79s/it, loss=2.2, v_num=0]Epoch 2:  64%|██████▍   | 32/50 [01:13<00:41,  2.30s/it, loss=2.2, v_num=0]Epoch 2:  64%|██████▍   | 32/50 [01:13<00:41,  2.30s/it, loss=2.06, v_num=0]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/18 [00:03<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 18/18 [00:08<00:00,  2.22it/s][AEpoch 2: 100%|██████████| 50/50 [01:21<00:00,  1.64s/it, loss=2.06, v_num=0]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.9941, device='cuda:0'), 'ConfusionMatrix': tensor([[802746,      0],
+        [  4796,      0]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0., device='cuda:0'), 'Recall': tensor(0., device='cuda:0'), 'F1Score': tensor(0., device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9941, device='cuda:0'), 'Recall': tensor(1., device='cuda:0'), 'F1Score': tensor(0.9970, device='cuda:0')}
+val_loss 1.8236 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Epoch 2: 100%|██████████| 50/50 [01:21<00:00,  1.64s/it, loss=2.06, v_num=0]
+                                                                        [AEpoch 2: 100%|██████████| 50/50 [01:21<00:00,  1.64s/it, loss=2.06, v_num=0]Epoch 2, global step 96: 'val_loss' reached 1.82361 (best 1.82361), saving model to 'logs_otters/version_0/checkpoints/best.ckpt' as top 1
+Epoch 3: 100%|██████████| 50/50 [01:22<00:00,  1.65s/it, loss=2.06, v_num=0]Epoch 3:  50%|█████     | 25/50 [01:37<01:37,  3.88s/it, loss=2.06, v_num=0]Epoch 3:  50%|█████     | 25/50 [01:37<01:37,  3.89s/it, loss=1.46, v_num=0]Epoch 3:  64%|██████▍   | 32/50 [01:39<00:56,  3.11s/it, loss=1.46, v_num=0]Epoch 3:  64%|██████▍   | 32/50 [01:39<00:56,  3.11s/it, loss=1.32, v_num=0]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/18 [00:03<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 18/18 [00:07<00:00,  2.30it/s][AEpoch 3: 100%|██████████| 50/50 [01:47<00:00,  2.15s/it, loss=1.32, v_num=0]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.9944, device='cuda:0'), 'ConfusionMatrix': tensor([[802552,    194],
+        [  4299,    497]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0.7192, device='cuda:0'), 'Recall': tensor(0.1036, device='cuda:0'), 'F1Score': tensor(0.1812, device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9947, device='cuda:0'), 'Recall': tensor(0.9998, device='cuda:0'), 'F1Score': tensor(0.9972, device='cuda:0')}
+val_loss 1.2536 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Epoch 3: 100%|██████████| 50/50 [01:47<00:00,  2.15s/it, loss=1.32, v_num=0]
+                                                                        [AEpoch 3: 100%|██████████| 50/50 [01:47<00:00,  2.15s/it, loss=1.32, v_num=0]Epoch 3, global step 128: 'val_loss' reached 1.25358 (best 1.25358), saving model to 'logs_otters/version_0/checkpoints/best.ckpt' as top 1
+Epoch 4: 100%|██████████| 50/50 [01:48<00:00,  2.17s/it, loss=1.32, v_num=0]Epoch 4:  50%|█████     | 25/50 [02:03<02:03,  4.93s/it, loss=1.32, v_num=0]Epoch 4:  50%|█████     | 25/50 [02:03<02:03,  4.94s/it, loss=1.11, v_num=0]Epoch 4:  64%|██████▍   | 32/50 [02:05<01:10,  3.93s/it, loss=1.11, v_num=0]Epoch 4:  64%|██████▍   | 32/50 [02:05<01:10,  3.93s/it, loss=1.01, v_num=0]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/18 [00:03<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 18/18 [00:07<00:00,  2.32it/s][AEpoch 4: 100%|██████████| 50/50 [02:13<00:00,  2.67s/it, loss=1.01, v_num=0]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.9952, device='cuda:0'), 'ConfusionMatrix': tensor([[801831,    915],
+        [  2961,   1835]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0.6673, device='cuda:0'), 'Recall': tensor(0.3826, device='cuda:0'), 'F1Score': tensor(0.4864, device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9963, device='cuda:0'), 'Recall': tensor(0.9989, device='cuda:0'), 'F1Score': tensor(0.9976, device='cuda:0')}
+val_loss 0.9641 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Epoch 4: 100%|██████████| 50/50 [02:13<00:00,  2.67s/it, loss=1.01, v_num=0]
+                                                                        [AEpoch 4: 100%|██████████| 50/50 [02:13<00:00,  2.67s/it, loss=1.01, v_num=0]Epoch 4, global step 160: 'val_loss' reached 0.96407 (best 0.96407), saving model to 'logs_otters/version_0/checkpoints/best.ckpt' as top 1
+Epoch 5: 100%|██████████| 50/50 [02:14<00:00,  2.69s/it, loss=1.01, v_num=0]Epoch 5:  50%|█████     | 25/50 [02:28<02:28,  5.96s/it, loss=1.01, v_num=0]Epoch 5:  50%|█████     | 25/50 [02:28<02:28,  5.96s/it, loss=0.8, v_num=0] Epoch 5:  64%|██████▍   | 32/50 [02:31<01:25,  4.72s/it, loss=0.8, v_num=0]Epoch 5:  64%|██████▍   | 32/50 [02:31<01:25,  4.72s/it, loss=0.743, v_num=0]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/18 [00:03<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 18/18 [00:08<00:00,  2.25it/s][AEpoch 5: 100%|██████████| 50/50 [02:39<00:00,  3.19s/it, loss=0.743, v_num=0]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.9959, device='cuda:0'), 'ConfusionMatrix': tensor([[801606,   1140],
+        [  2205,   2591]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0.6945, device='cuda:0'), 'Recall': tensor(0.5402, device='cuda:0'), 'F1Score': tensor(0.6077, device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9973, device='cuda:0'), 'Recall': tensor(0.9986, device='cuda:0'), 'F1Score': tensor(0.9979, device='cuda:0')}
+val_loss 0.7252 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Epoch 5: 100%|██████████| 50/50 [02:39<00:00,  3.19s/it, loss=0.743, v_num=0]
+                                                                        [AEpoch 5: 100%|██████████| 50/50 [02:39<00:00,  3.19s/it, loss=0.743, v_num=0]Epoch 5, global step 192: 'val_loss' reached 0.72517 (best 0.72517), saving model to 'logs_otters/version_0/checkpoints/best.ckpt' as top 1
+Epoch 6: 100%|██████████| 50/50 [02:40<00:00,  3.20s/it, loss=0.743, v_num=0]Epoch 6:  50%|█████     | 25/50 [02:54<02:54,  6.96s/it, loss=0.743, v_num=0]Epoch 6:  50%|█████     | 25/50 [02:54<02:54,  6.96s/it, loss=0.652, v_num=0]Epoch 6:  64%|██████▍   | 32/50 [02:56<01:39,  5.53s/it, loss=0.652, v_num=0]Epoch 6:  64%|██████▍   | 32/50 [02:56<01:39,  5.53s/it, loss=0.636, v_num=0]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/18 [00:03<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 18/18 [00:08<00:00,  2.19it/s][AEpoch 6: 100%|██████████| 50/50 [03:05<00:00,  3.71s/it, loss=0.636, v_num=0]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.9960, device='cuda:0'), 'ConfusionMatrix': tensor([[801119,   1627],
+        [  1615,   3181]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0.6616, device='cuda:0'), 'Recall': tensor(0.6633, device='cuda:0'), 'F1Score': tensor(0.6624, device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9980, device='cuda:0'), 'Recall': tensor(0.9980, device='cuda:0'), 'F1Score': tensor(0.9980, device='cuda:0')}
+val_loss 0.6803 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Epoch 6: 100%|██████████| 50/50 [03:05<00:00,  3.71s/it, loss=0.636, v_num=0]
+                                                                        [AEpoch 6: 100%|██████████| 50/50 [03:05<00:00,  3.71s/it, loss=0.636, v_num=0]Epoch 6, global step 224: 'val_loss' reached 0.68030 (best 0.68030), saving model to 'logs_otters/version_0/checkpoints/best.ckpt' as top 1
+Epoch 7: 100%|██████████| 50/50 [03:06<00:00,  3.72s/it, loss=0.636, v_num=0]Epoch 7:  50%|█████     | 25/50 [03:23<03:23,  8.14s/it, loss=0.636, v_num=0]Epoch 7:  50%|█████     | 25/50 [03:23<03:23,  8.15s/it, loss=0.592, v_num=0]Epoch 7:  64%|██████▍   | 32/50 [03:26<01:55,  6.44s/it, loss=0.592, v_num=0]Epoch 7:  64%|██████▍   | 32/50 [03:26<01:55,  6.44s/it, loss=0.566, v_num=0]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/18 [00:07<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 18/18 [00:13<00:00,  1.34it/s][AEpoch 7: 100%|██████████| 50/50 [03:39<00:00,  4.39s/it, loss=0.566, v_num=0]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.9961, device='cuda:0'), 'ConfusionMatrix': tensor([[801061,   1685],
+        [  1497,   3299]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0.6619, device='cuda:0'), 'Recall': tensor(0.6879, device='cuda:0'), 'F1Score': tensor(0.6746, device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9981, device='cuda:0'), 'Recall': tensor(0.9979, device='cuda:0'), 'F1Score': tensor(0.9980, device='cuda:0')}
+val_loss 0.6460 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Epoch 7: 100%|██████████| 50/50 [03:39<00:00,  4.39s/it, loss=0.566, v_num=0]
+                                                                        [AEpoch 7: 100%|██████████| 50/50 [03:39<00:00,  4.39s/it, loss=0.566, v_num=0]Epoch 7, global step 256: 'val_loss' reached 0.64597 (best 0.64597), saving model to 'logs_otters/version_0/checkpoints/best.ckpt' as top 1
+Epoch 8: 100%|██████████| 50/50 [03:40<00:00,  4.41s/it, loss=0.566, v_num=0]Epoch 8:  50%|█████     | 25/50 [03:54<03:54,  9.37s/it, loss=0.566, v_num=0]Epoch 8:  50%|█████     | 25/50 [03:54<03:54,  9.37s/it, loss=0.56, v_num=0] Epoch 8:  64%|██████▍   | 32/50 [03:56<02:13,  7.40s/it, loss=0.56, v_num=0]Epoch 8:  64%|██████▍   | 32/50 [03:56<02:13,  7.40s/it, loss=0.542, v_num=0]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/18 [00:03<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 18/18 [00:08<00:00,  2.20it/s][AEpoch 8: 100%|██████████| 50/50 [04:05<00:00,  4.91s/it, loss=0.542, v_num=0]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.9962, device='cuda:0'), 'ConfusionMatrix': tensor([[801169,   1577],
+        [  1499,   3297]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0.6764, device='cuda:0'), 'Recall': tensor(0.6874, device='cuda:0'), 'F1Score': tensor(0.6819, device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9981, device='cuda:0'), 'Recall': tensor(0.9980, device='cuda:0'), 'F1Score': tensor(0.9981, device='cuda:0')}
+val_loss 0.6086 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Epoch 8: 100%|██████████| 50/50 [04:05<00:00,  4.91s/it, loss=0.542, v_num=0]
+                                                                        [AEpoch 8: 100%|██████████| 50/50 [04:05<00:00,  4.91s/it, loss=0.542, v_num=0]Epoch 8, global step 288: 'val_loss' reached 0.60855 (best 0.60855), saving model to 'logs_otters/version_0/checkpoints/best.ckpt' as top 1
+Epoch 9: 100%|██████████| 50/50 [04:06<00:00,  4.92s/it, loss=0.542, v_num=0]Epoch 9:  50%|█████     | 25/50 [04:19<04:19, 10.36s/it, loss=0.542, v_num=0]Epoch 9:  50%|█████     | 25/50 [04:19<04:19, 10.37s/it, loss=0.525, v_num=0]Epoch 9:  64%|██████▍   | 32/50 [04:21<02:27,  8.18s/it, loss=0.525, v_num=0]Epoch 9:  64%|██████▍   | 32/50 [04:21<02:27,  8.18s/it, loss=0.513, v_num=0]
+Validation: 0it [00:00, ?it/s][A
+Validation DataLoader 0:   0%|          | 0/18 [00:03<?, ?it/s][A
+Validation DataLoader 0: 100%|██████████| 18/18 [00:07<00:00,  2.29it/s][AEpoch 9: 100%|██████████| 50/50 [04:29<00:00,  5.40s/it, loss=0.513, v_num=0]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+validation_epoch_end
+common_metric {'Accuracy': tensor(0.9962, device='cuda:0'), 'ConfusionMatrix': tensor([[801325,   1421],
+        [  1628,   3168]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0.6903, device='cuda:0'), 'Recall': tensor(0.6606, device='cuda:0'), 'F1Score': tensor(0.6751, device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9980, device='cuda:0'), 'Recall': tensor(0.9982, device='cuda:0'), 'F1Score': tensor(0.9981, device='cuda:0')}
+val_loss 0.5811 
+
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Epoch 9: 100%|██████████| 50/50 [04:29<00:00,  5.40s/it, loss=0.513, v_num=0]
+                                                                        [AEpoch 9: 100%|██████████| 50/50 [04:29<00:00,  5.40s/it, loss=0.513, v_num=0]Epoch 9, global step 320: 'val_loss' reached 0.58110 (best 0.58110), saving model to 'logs_otters/version_0/checkpoints/best.ckpt' as top 1
+Epoch 9: 100%|██████████| 50/50 [04:30<00:00,  5.41s/it, loss=0.513, v_num=0]
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Testing: 0it [00:00, ?it/s]Testing DataLoader 0:   0%|          | 0/18 [00:03<?, ?it/s]Testing DataLoader 0: 100%|██████████| 18/18 [00:08<00:00,  2.24it/s]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+test_epoch_end
+common_metric {'Accuracy': tensor(0.9960, device='cuda:0'), 'ConfusionMatrix': tensor([[750928,   1552],
+        [  1498,   2995]], device='cuda:0')}
+pr_positive  {'Precision': tensor(0.6587, device='cuda:0'), 'Recall': tensor(0.6666, device='cuda:0'), 'F1Score': tensor(0.6626, device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9980, device='cuda:0'), 'Recall': tensor(0.9979, device='cuda:0'), 'F1Score': tensor(0.9980, device='cuda:0')}
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Testing DataLoader 0: 100%|██████████| 18/18 [00:08<00:00,  2.24it/s]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│         accuracy          │    0.9959707856178284     │
+│            f1             │     0.662610650062561     │
+│         precision         │     0.658676028251648     │
+└───────────────────────────┴───────────────────────────┘
+len predicting: 372
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: 32it [00:00, ?it/s]Predicting DataLoader 0:  68%|██████▊   | 32/47 [02:57<?, ?it/s]Predicting DataLoader 0:  53%|█████▎    | 25/47 [10:31<-1:26:57, -0.01it/s]Predicting DataLoader 0: 100%|██████████| 47/47 [16:21<00:00, 65.43s/it]   
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+on_predict_epoch_end
+graph_counter avg len  tensor(1561.9568)
+graph_counter avg miss node  tensor(2.3946)
+graph_counter avg b_c  tensor(12.1432)
+hits@1  tensor(0.6541)
+hits@3 tensor(0.6360)
+hits@1 / all tensor(0.0728)
+hits@3 / all tensor(0.2173)
+common_metric {'Accuracy': tensor(0.9951), 'ConfusionMatrix': tensor([[574083,   1098],
+        [  1713,   1030]])}
+pr_positive  {'Precision': tensor(0.4840, device='cuda:0'), 'Recall': tensor(0.3755, device='cuda:0'), 'F1Score': tensor(0.4229, device='cuda:0')}
+pr_negative  {'Precision': tensor(0.9970, device='cuda:0'), 'Recall': tensor(0.9981, device='cuda:0'), 'F1Score': tensor(0.9976, device='cuda:0')}
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Predicting DataLoader 0: 100%|██████████| 47/47 [16:21<00:00, 65.46s/it]

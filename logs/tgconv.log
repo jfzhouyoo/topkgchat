@@ -1,0 +1,28 @@
+nohup: 忽略输入
+Global seed set to 100
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+test_len: 150
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Predicting: 0it [00:00, ?it/s]Predicting DataLoader 0:   0%|          | 0/38 [02:32<?, ?it/s]Predicting DataLoader 0:   3%|▎         | 1/38 [02:36<1:36:41, 156.80s/it]Predicting DataLoader 0:   5%|▌         | 2/38 [02:37<47:21, 78.93s/it]   Predicting DataLoader 0:   8%|▊         | 3/38 [03:10<37:00, 63.45s/it]Predicting DataLoader 0:  11%|█         | 4/38 [03:12<27:20, 48.25s/it]Predicting DataLoader 0:  13%|█▎        | 5/38 [03:15<21:30, 39.11s/it]Predicting DataLoader 0:  16%|█▌        | 6/38 [03:16<17:29, 32.81s/it]Predicting DataLoader 0:  18%|█▊        | 7/38 [03:18<14:38, 28.34s/it]Predicting DataLoader 0:  21%|██        | 8/38 [03:41<13:52, 27.74s/it]Predicting DataLoader 0:  24%|██▎       | 9/38 [03:44<12:02, 24.91s/it]Predicting DataLoader 0:  26%|██▋       | 10/38 [03:47<10:36, 22.75s/it]Predicting DataLoader 0:  29%|██▉       | 11/38 [06:02<14:50, 33.00s/it]Predicting DataLoader 0:  32%|███▏      | 12/38 [06:05<13:11, 30.43s/it]Predicting DataLoader 0:  34%|███▍      | 13/38 [06:07<11:47, 28.29s/it]Predicting DataLoader 0:  37%|███▋      | 14/38 [06:09<10:33, 26.40s/it]Predicting DataLoader 0:  39%|███▉      | 15/38 [06:12<09:31, 24.86s/it]Predicting DataLoader 0:  42%|████▏     | 16/38 [06:13<08:34, 23.37s/it]Predicting DataLoader 0:  45%|████▍     | 17/38 [06:15<07:44, 22.11s/it]Predicting DataLoader 0:  47%|████▋     | 18/38 [06:18<07:00, 21.01s/it]/home/hyx/yzt/target-guided/code/global_planing.py:33: RuntimeWarning: invalid value encountered in true_divide
+  res = num / denom
+Predicting DataLoader 0:  50%|█████     | 19/38 [08:26<08:26, 26.67s/it]Predicting DataLoader 0:  53%|█████▎    | 20/38 [08:40<07:48, 26.02s/it]Predicting DataLoader 0:  55%|█████▌    | 21/38 [08:41<07:02, 24.86s/it]Predicting DataLoader 0:  58%|█████▊    | 22/38 [08:45<06:22, 23.88s/it]Predicting DataLoader 0:  61%|██████    | 23/38 [08:48<05:44, 22.99s/it]Predicting DataLoader 0:  63%|██████▎   | 24/38 [08:51<05:09, 22.14s/it]Predicting DataLoader 0:  66%|██████▌   | 25/38 [08:53<04:37, 21.33s/it]Predicting DataLoader 0:  68%|██████▊   | 26/38 [08:55<04:06, 20.58s/it]Predicting DataLoader 0:  71%|███████   | 27/38 [08:56<03:38, 19.88s/it]Predicting DataLoader 0:  74%|███████▎  | 28/38 [09:40<03:27, 20.72s/it]Predicting DataLoader 0:  76%|███████▋  | 29/38 [09:40<03:00, 20.02s/it]Predicting DataLoader 0:  79%|███████▉  | 30/38 [09:41<02:34, 19.37s/it]Predicting DataLoader 0:  82%|████████▏ | 31/38 [09:41<02:11, 18.77s/it]Predicting DataLoader 0:  84%|████████▍ | 32/38 [09:42<01:49, 18.20s/it]Predicting DataLoader 0:  87%|████████▋ | 33/38 [09:42<01:28, 17.66s/it]Predicting DataLoader 0:  89%|████████▉ | 34/38 [09:43<01:08, 17.16s/it]Predicting DataLoader 0:  92%|█████████▏| 35/38 [09:43<00:50, 16.68s/it]Predicting DataLoader 0:  95%|█████████▍| 36/38 [10:06<00:33, 16.85s/it]Predicting DataLoader 0:  97%|█████████▋| 37/38 [10:06<00:16, 16.40s/it]Predicting DataLoader 0: 100%|██████████| 38/38 [10:07<00:00, 15.98s/it]
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+predict_epoch_end
+hits@1 tensor(0.0085)
+hits@3 tensor(0.0028)
+hits@1 / all  tensor(0.0028)
+hits@3 / all  tensor(0.0028)
+bleu  BLEU = 1.01 19.3/2.4/0.7/0.3 (BP = 0.567 ratio = 0.638 hyp_len = 975 ref_len = 1529)
+nlg_eval  {'Bleu_1': 0.059076912923364366, 'Bleu_2': 0.02218392706035459, 'Bleu_3': 0.011209208507792983, 'Bleu_4': 0.007089937988141647, 'METEOR': 0.05045553106654699, 'ROUGE_L': 0.08663258377514065, 'CIDEr': 0.06220638403386755}
+
+
+ ---------------------------------------------------------------------------------------------------- 
+
+
+Predicting DataLoader 0: 100%|██████████| 38/38 [10:07<00:00, 15.99s/it]
