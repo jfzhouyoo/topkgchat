@@ -7,7 +7,7 @@ Install the required packages:
 pip install -r requirements.txt
 ```
 
-kill $(ps -ef | grep predi | tr -s ' ' | cut -d ' ' -f 2)
+
 
 ## Directory Structure
 
@@ -55,7 +55,7 @@ The processed files are placed in the `data` folder
 
 ## Training
 
-### 1. Stage 1 Learning
+### Stage 1 Learning
 
 To train basemodel, please run the following script:
 
@@ -104,7 +104,7 @@ Make sure that the discriminator, predictor, and generator paths used in the cod
 python code/stage2_ppo.py --base_path logs_base/version_0/checkpoints/best.ckpt --disc_path logs_discri/version_0
 ```
 
-## Simulation
+## Test
 
 The best running results have been saved in the file `output/simulation_output.txt`
 
