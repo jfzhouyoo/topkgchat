@@ -1,4 +1,5 @@
-# TopKG: Target-oriented Dialog via Global Planning on Knowledge Graph
+# Code for TopKG
+> The implementation of our paper accepted by COLING2022: [TopKG: Target-oriented Dialog via Global Planning on Knowledge Graph](https://aclanthology.org/2022.coling-1.62/)
 
 ## Prerequisites
 
@@ -113,4 +114,27 @@ The best running results have been saved in the file `output/simulation_output.t
 ```bash
 python code/rl_test.py --target easy
 python code/rl_test.py --target hard
+```
+
+## Citation
+If you find our work useful for your research, please kindly cite our paper as follows:
+```
+@inproceedings{yang-etal-2022-topkg,
+    title = "{T}op{KG}: Target-oriented Dialog via Global Planning on Knowledge Graph",
+    author = "Yang, Zhitong  and
+      Wang, Bo  and
+      Zhou, Jinfeng  and
+      Tan, Yue  and
+      Zhao, Dongming  and
+      Huang, Kun  and
+      He, Ruifang  and
+      Hou, Yuexian",
+    booktitle = "Proceedings of the 29th International Conference on Computational Linguistics",
+    month = oct,
+    year = "2022",
+    address = "Gyeongju, Republic of Korea",
+    publisher = "International Committee on Computational Linguistics",
+    url = "https://aclanthology.org/2022.coling-1.62",
+    pages = "745--755"
+}
 ```
